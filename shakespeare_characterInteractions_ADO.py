@@ -46,18 +46,7 @@ def characterInteractions(new_character_list):
                 interactions[firstWord][secondWord]=0
             if secondWord in interactions[firstWord]:
                 interactions[firstWord][secondWord]+=1
-    '''
-    df_ado = pd.DataFrame.from_dict(interactions)
-    df_ado = df_ado.sort_index(axis=1)
-    df_ado = df_ado.sort_index(axis=0)
-    df_ado_2 = np.triu(df_ado)+np.triu(df_ado,1).T
-    df_ado_3 = pd.DataFrame(df_ado_2, columns=df_ado.columns, index=df_ado.index)
-    df_ado_3 = df_ado_3.fillna(0)
-    df_ado_3 = df_ado_3.drop("scene",axis=1)
-    df_ado_3 = df_ado_3.drop("scene",axis=0)
-    print(df_ado_3)
-    df_ado_3.to_csv(f'data/ADO_interactions.csv', index=True)
-    '''
+  
     df = pd.DataFrame.from_dict(interactions)
     df = df.sort_index(axis=1)
     df = df.sort_index(axis=0)
