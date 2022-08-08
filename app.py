@@ -134,6 +134,6 @@ components.html(source_code, height=h * 1.1, width=w * 1.1)
 st.sidebar.markdown('''
 ## ABOUT
 Code: https://github.com/isabelhansen\n
-Digital Collection: https://shakespeare.folger.edu/ \n
+Digitale Sammlung: https://shakespeare.folger.edu/ \n
 Tools: [Streamlit](https://streamlit.io/), [Altair](https://altair-viz.github.io/), [Networkx](https://networkx.org/) & [Pyvis](https://pyvis.readthedocs.io/en/latest/)
 ''')
