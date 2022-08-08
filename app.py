@@ -74,7 +74,7 @@ interactions = st.sidebar.slider(
 st.markdown(
     '''#### INTERACTION NETWORK
 Dickere Linien = Mehr Interaktion. \n
-Entdecke dich spielerisch durch das Netzwerk, indem du an den Knoten klickst und ziehst.
+Klicke und ziehe an den Knoten, um die Interaktionen der einzelnen Charaktere sichtbarer zu machen. 
 ''')
 
 nx_graph = nx.empty_graph(interactions)  # create initial dummy graph
@@ -112,6 +112,7 @@ for wt, fr, to in relationships.values:
             nx_graph.add_edge(name2node[fr], name2node[to],
                               width=wt/4.5,
                               color='#094230')
+
 
 # translate to pyvis network
 h, w = 500, 750
