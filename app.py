@@ -9,7 +9,7 @@ import altair as alt
 import networkx as nx
 from pyvis.network import Network
 
-from characters import col_dict, snames, max_node_map, def_node_map
+from param import col_dict, snames, max_node_map, def_node_map
 from util import parse_data, clock, rc
 
 
