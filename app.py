@@ -10,7 +10,7 @@ import networkx as nx
 from pyvis.network import Network
 
 from characters import col_dict, snames, max_node_map, def_node_map
-from network import parse_data, parse_ts, clock, rc
+from clock_data import parse_data, parse_ts, clock, rc
 
 
 #####################

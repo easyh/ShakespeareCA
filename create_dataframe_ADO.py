@@ -44,6 +44,8 @@ def characterInteractions(character_order):
                 interactions[firstWord][secondWord]=0
             if secondWord in interactions[firstWord]:
                 interactions[firstWord][secondWord]+=1
+
+     print(interactions)           
   
     df = pd.DataFrame.from_dict(interactions)
     df = df.sort_index(axis=1)
