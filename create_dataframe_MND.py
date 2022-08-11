@@ -18,18 +18,18 @@ def cleanText(text):
 
 def characters(text_list):
     character_list = ["scene", "HERMIA", "LYSANDER", "HELENA", "DEMETRIUS", "THESEUS", "HIPPOLYTA", "EGEUS","PHILOSTRATE", "BOTTOM","QUINCE","FLUTE","SNOUT","ROBIN","SNUG","OBERON", "TITANIA","FAIRY","PEASEBLOSSOM","COBWEB","MOTE","MUSTARDSEED"]
-    new_character_list = []
+    character_order = []
     for character in text_list: 
         if character in character_list:
-            new_character_list.append(character)
-    return new_character_list
+            character_order.append(character)
+    return character_order
 
-def characterInteractions(new_character_list):
+def characterInteractions(character_order):
 
     interactions = {}
-    for i in range(len(new_character_list)-1): #bis zum vorletzten Wort (damit es noch ein Paar gibt)
-        firstWord=new_character_list[i]#erstes Wort des Wortpaares ist auf Position i
-        secondWord=new_character_list[i+1] #zweites Wort des Wortpaares 
+    for i in range(len(character_order)-1): #bis zum vorletzten Wort (damit es noch ein Paar gibt)
+        firstWord=character_order[i]#erstes Wort des Wortpaares ist auf Position i
+        secondWord=character_order[i+1] #zweites Wort des Wortpaares 
         if (len(firstWord)>0 and len(secondWord)>0): 
             if not firstWord in interactions: 
                 interactions[firstWord]={}
@@ -51,8 +51,8 @@ def characterInteractions(new_character_list):
 def main(textfile):
     text=readText(textfile)
     text_list=cleanText(text)
-    new_character_list=characters(text_list)
-    text_list=characterInteractions(new_character_list)
+    character_order=characters(text_list)
+    text_list=characterInteractions(character_order)
 
 
 main(textfile)
