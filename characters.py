@@ -1,5 +1,3 @@
-# store for hardcoded variables
-
 grey = 'rgb(40,40,40)'
 orange = 'rgb(179,138,0)'
 red = 'rgb(209,50,35)'
