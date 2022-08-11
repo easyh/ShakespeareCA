@@ -35,7 +35,7 @@ st.markdown(f""" <style>
     }} </style> """, unsafe_allow_html=True)
 
 
-st.sidebar.markdown('# Shakespeare Character Interactions')
+st.sidebar.markdown('# Shakespeare Charakter Interaktionen')
 
 # for selecting series
 series_pick = st.sidebar.selectbox('Shakespeare Werk wählen:',
@@ -72,7 +72,7 @@ interactions = st.sidebar.slider(
 
 
 st.markdown(
-    '''#### INTERACTION NETWORK
+    '''#### INTERAKTIONS NETZWERK
 Dickere Linien = Mehr Interaktion. \n
 Klicke und ziehe an den Knoten, um die Interaktionen der einzelnen Charaktere sichtbarer zu machen. 
 ''')
